@@ -1,0 +1,76 @@
+.story {
+    min-height: 600px;
+    padding-bottom: 120px;
+    &__title {
+        font-family: 'Audiowide';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 37px;
+        line-height: 45px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        padding-top: 258px;
+        span {
+            color: #A8A8A8;
+        }
+    }
+    &__wrapper {
+        display: flex;
+        margin-top: 61px;
+    }
+    &__tabs {
+        &_tab {
+            padding: 25px 134px 31px 28px;
+            cursor: pointer;
+            &_active {
+                background: #222222;
+            }
+            &_text {
+                font-family: 'DM Mono';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 16px;
+                color: #FFFFFF;
+            }
+        }
+    }
+    &__block {
+        width: 878px;
+        // height: 538px;
+        background: #222222;
+        display: flex;
+        padding: 60px;
+        display: none;
+        &_active {
+            display: flex;
+        }
+        &_item {
+            &_second {
+                margin-left: 40px;
+            }
+            &_title {
+                font-family: 'DM Mono';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 21px;
+                line-height: 32px;
+                color: #8DFD1B;
+                width: 494px;
+                border-left: 2px solid #8DFD1B;
+                padding-left: 22px;
+            }
+            &_descr {
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 26px;
+                color: #FFFFFF;
+                margin-top: 20px;
+                width: 525px;
+            }
+        }
+    }
+}

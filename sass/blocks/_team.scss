@@ -1,0 +1,82 @@
+.team {
+    min-height: 800px;
+    &__title {
+        font-family: 'Audiowide';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 79px;
+        line-height: 88px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        text-align: center;
+
+    }
+    &__wrapper {
+        display: flex;
+        margin-top: 129px;
+    }
+    &__item {
+        width: 33%;
+        &_image {
+            img {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+        &_name {
+            font-family: 'DM Mono';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 21px;
+            line-height: 28px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            margin-top: 19px;
+        }
+        &_info {
+            font-family: 'DM Mono';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 11px;
+            line-height: 12px;
+            text-align: center;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #8DFD1B;
+            margin-top: 18px;
+        }
+        &_icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 22px;
+            cursor: pointer;
+            &_icon {
+                padding: 8px;
+                background: #fff;
+                margin: 0 6px;
+                svg {
+                    width: 20px;
+                    height: 20px;
+                    fill: #000;
+                    &:hover {
+                        fill: gray;
+                        transition: all .3s;
+                    }
+                }
+            }
+        }
+        &_descr {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 19px;
+            text-align: center;
+            color: #FFFFFF;
+            margin: 0 auto;
+            margin-top: 22px;
+            width: 238px;
+        }
+    }
+}

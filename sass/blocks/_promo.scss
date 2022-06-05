@@ -1,0 +1,32 @@
+.promo {
+    background: #000;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 70px;
+    }
+    &__item {
+        &_title {
+            font-family: 'Audiowide';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 51px;
+            line-height: 61px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            width: 484px;
+            padding-top: 125px;
+        }
+        &_descr {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            color: #FFFFFF;
+            width: 340px;
+            margin-top: 43px;
+            margin-bottom: 115px;
+        }
+    }
+}

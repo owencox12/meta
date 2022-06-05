@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=DM+Mono:wght@300;400;500&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <svg style="display: none;">
+        <symbol id="twitter" viewBox="0 0 56.693 56.693">
+            <path d="M52.837,15.065c-1.811,0.805-3.76,1.348-5.805,1.591c2.088-1.25,3.689-3.23,4.444-5.592c-1.953,1.159-4.115,2-6.418,2.454  c-1.843-1.964-4.47-3.192-7.377-3.192c-5.581,0-10.106,4.525-10.106,10.107c0,0.791,0.089,1.562,0.262,2.303  c-8.4-0.422-15.848-4.445-20.833-10.56c-0.87,1.492-1.368,3.228-1.368,5.082c0,3.506,1.784,6.6,4.496,8.412  c-1.656-0.053-3.215-0.508-4.578-1.265c-0.001,0.042-0.001,0.085-0.001,0.128c0,4.896,3.484,8.98,8.108,9.91  c-0.848,0.23-1.741,0.354-2.663,0.354c-0.652,0-1.285-0.063-1.902-0.182c1.287,4.015,5.019,6.938,9.441,7.019  c-3.459,2.711-7.816,4.327-12.552,4.327c-0.815,0-1.62-0.048-2.411-0.142c4.474,2.869,9.786,4.541,15.493,4.541  c18.591,0,28.756-15.4,28.756-28.756c0-0.438-0.009-0.875-0.028-1.309C49.769,18.873,51.483,17.092,52.837,15.065z"/>
+        </symbol>
+    </svg>
+    <svg style="display: none;">
+        <symbol id="youtube" viewBox="0 0 512 512">
+            <path d="M508.6,148.8c0-45-33.1-81.2-74-81.2C379.2,65,322.7,64,265,64c-3,0-6,0-9,0s-6,0-9,0c-57.6,0-114.2,1-169.6,3.6   c-40.8,0-73.9,36.4-73.9,81.4C1,184.6-0.1,220.2,0,255.8C-0.1,291.4,1,327,3.4,362.7c0,45,33.1,81.5,73.9,81.5   c58.2,2.7,117.9,3.9,178.6,3.8c60.8,0.2,120.3-1,178.6-3.8c40.9,0,74-36.5,74-81.5c2.4-35.7,3.5-71.3,3.4-107   C512.1,220.1,511,184.5,508.6,148.8z M207,353.9V157.4l145,98.2L207,353.9z"/>
+        </symbol>
+    </svg>
+    <svg style="display: none;">
+        <symbol id="discord" viewBox="0 0 640 512">
+            <path d="M524.531,69.836a1.5,1.5,0,0,0-.764-.7A485.065,485.065,0,0,0,404.081,32.03a1.816,1.816,0,0,0-1.923.91,337.461,337.461,0,0,0-14.9,30.6,447.848,447.848,0,0,0-134.426,0,309.541,309.541,0,0,0-15.135-30.6,1.89,1.89,0,0,0-1.924-.91A483.689,483.689,0,0,0,116.085,69.137a1.712,1.712,0,0,0-.788.676C39.068,183.651,18.186,294.69,28.43,404.354a2.016,2.016,0,0,0,.765,1.375A487.666,487.666,0,0,0,176.02,479.918a1.9,1.9,0,0,0,2.063-.676A348.2,348.2,0,0,0,208.12,430.4a1.86,1.86,0,0,0-1.019-2.588,321.173,321.173,0,0,1-45.868-21.853,1.885,1.885,0,0,1-.185-3.126c3.082-2.309,6.166-4.711,9.109-7.137a1.819,1.819,0,0,1,1.9-.256c96.229,43.917,200.41,43.917,295.5,0a1.812,1.812,0,0,1,1.924.233c2.944,2.426,6.027,4.851,9.132,7.16a1.884,1.884,0,0,1-.162,3.126,301.407,301.407,0,0,1-45.89,21.83,1.875,1.875,0,0,0-1,2.611,391.055,391.055,0,0,0,30.014,48.815,1.864,1.864,0,0,0,2.063.7A486.048,486.048,0,0,0,610.7,405.729a1.882,1.882,0,0,0,.765-1.352C623.729,277.594,590.933,167.465,524.531,69.836ZM222.491,337.58c-28.972,0-52.844-26.587-52.844-59.239S193.056,219.1,222.491,219.1c29.665,0,53.306,26.82,52.843,59.239C275.334,310.993,251.924,337.58,222.491,337.58Zm195.38,0c-28.971,0-52.843-26.587-52.843-59.239S388.437,219.1,417.871,219.1c29.667,0,53.307,26.82,52.844,59.239C470.715,310.993,447.538,337.58,417.871,337.58Z"/>
+        </symbol>
+    </svg>
+    <svg style="display: none;">
+        <symbol id="telegram" viewBox="0 0 448 512">
+            <path d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z"/>
+        </symbol>
+    </svg>
+    <svg style="display: none;">
+        <symbol id="linkedin" viewBox="0 0 24 24">
+            <g><path d="M8,19H5V9h3V19z M19,19h-3v-5.342c0-1.392-0.496-2.085-1.479-2.085c-0.779,0-1.273,0.388-1.521,1.165C13,14,13,19,13,19h-3   c0,0,0.04-9,0-10h2.368l0.183,2h0.062c0.615-1,1.598-1.678,2.946-1.678c1.025,0,1.854,0.285,2.487,1.001   C18.683,11.04,19,12.002,19,13.353V19z"/></g><g><ellipse cx="6.5" cy="6.5" rx="1.55" ry="1.5"/></g>
+        </symbol>
+    </svg>
+    <header class="header">
+        <div class="container">
+        <div class="header__wrapper">
+            <div class="header__item ">
+                <div class="header__item_logo">
+                    <img src="image/logo.png" alt="">
+                </div>
+                <ul class="header__item_list">
+                    <li class="header__item_list_type"><a href="#nft" data-id="#nft">Wave NFTs</a></li>
+                    <li class="header__item_list_type"><a href="#stories" data-id="#stories">Stories</a></li>
+                    <li class="header__item_list_type"><a href="#contact" data-id="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="header__item">
+                <div class="header__item_icons">
+                    <div class="header__item_icons_icon">
+                        <svg><use xlink:href="#twitter"></use></svg>
+                    </div>
+                    <div class="header__item_icons_icon">
+                        <svg><use xlink:href="#discord"></use></svg>
+                    </div>
+                    <div class="header__item_icons_icon">
+                        <svg><use xlink:href="#youtube"></use></svg>
+                    </div>
+                    <div class="header__item_icons_icon">
+                        <svg><use xlink:href="#telegram"></use></svg>
+                    </div>
+                </div>
+            </div>
+            <div class="header__burger">
+                <span></span>
+            </div>
+            <div class="header__burger_list">
+                <div class="header__burger_list_title">
+                    Menu
+                </div>
+                <ul class="header__burger_list_menu">
+                    <li class="header__burger_list_menu_type"><a href="#">Wave NFTs</a></li>
+                    <li class="header__burger_list_menu_type"><a href="#">Stories</a></li>
+                    <li class="header__burger_list_menu_type"><a href="#">Contact</a></li>
+                </ul>
+                <div class="header__burger_list_icons">
+                    <div class="header__burger_list_icons_icon">
+                        <svg><use xlink:href="#twitter"></use></svg>
+                    </div>
+                    <div class="header__burger_list_icons_icon">
+                        <svg><use xlink:href="#discord"></use></svg>
+                    </div>
+                    <div class="header__burger_list_icons_icon">
+                        <svg><use xlink:href="#youtube"></use></svg>
+                    </div>
+                    <div class="header__burger_list_icons_icon">
+                        <svg><use xlink:href="#telegram"></use></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+    <section class="promo">
+        <div class="container container__second">
+        <div class="promo__wrapper">
+            <div class="promo__item promo__item_first">
+                <div class="promo__item_title">META RECORD LABEl</div>
+                <div class="promo__item_descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</div>
+                <div class="promo__item_btn">
+                    <button class="button button--promo"><span>Learn more</span></button>
+                </div>
+            </div>
+            <div class="promo__item">
+                <div class="promo__item_image">
+                    <img src="image/mainBG.png" alt="">
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="nft" id="nft">
+        <div class="container container__second">
+            <div class="nft__wrapper">
+                <div class="nft__item">
+                    <div class="nft__item_title">
+                        wave NFT
+                        <span>COLLECTION of 777</span>
+                    </div>
+                    <div class="nft__item_image">
+                        <img src="image/aboutbg.png" alt="">
+                    </div>
+                </div>
+                <div class="nft__item">
+                    <div class="nft__item_text">
+                        META WAVE NFT is your pass to Meta Record Label ecosystem. It is your access to our industry experts, established artists, and partners.
+                    </div>
+                    <div class="nft__item_descr">
+                        Hac habitasse platea dictumst vestibulum rhoncus est. Sit amet dictum sit amet justo. Tortor aliquam nulla facilisi cras.
+                    </div>
+                    <div class="nft__item_descr">
+                        Maecenas ultricies mi eget mauris pharetra. Sit amet consectetur adipiscing elit ut aliquam purus. Porta nibh venenatis cras sed felis. Aenean vel elit scelerisque mauris pellentesque pulvinar. Et malesuada fames ac turpis egestas sed tempus. Enim sit amet venenatis urna cursus eget.
+                    </div>
+                    <div class="nft__item_descr">
+                        Maecenas ultricies mi eget mauris pharetra et ultrices. A condimentum vitae sapien pellentesque habitant morbi.
+                    </div>
+                    <div class="nft__item_btn">
+                        <button class="button button--nft"><span>Get one on OpenSea</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="artists">
+            <div class="artists__title">
+                Artists
+            </div>
+            <div class="container container__second">
+            <div class="artists__wrapper">
+                <div class="artists__item">
+                    <div class="artists__item_image">
+                        <img src="image/artist1.png" alt="">
+                    </div>
+                    <div class="artists__item_name">Mark Popson</div>
+                </div>
+                <div class="artists__item">
+                    <div class="artists__item_image">
+                        <img src="image/artist2.png" alt="">
+                    </div>
+                    <div class="artists__item_name">Pete Bentz</div>
+                </div>
+                <div class="artists__item">
+                    <div class="artists__item_image">
+                        <img src="image/artist3.png" alt="">
+                    </div>
+                    <div class="artists__item_name">Daniela Youth</div>
+                </div>
+                <div class="artists__item">
+                    <div class="artists__item_image">
+                        <img src="image/artist4.png" alt="">
+                    </div>
+                    <div class="artists__item_name">Roman Gore</div>
+                </div>
+                <div class="artists__item">
+                    <div class="artists__item_image">
+                        <img src="image/artist5.png" alt="">
+                    </div>
+                    <div class="artists__item_name">Tonya</div>
+                </div>
+                <div class="artists__item">
+                    <div class="artists__item_image">
+                        <img src="image/artist6.png" alt="">
+                    </div>
+                    <div class="artists__item_name">Ivor</div>
+                </div>
+                <div class="artists__item">
+                    <div class="artists__item_image">
+                        <img src="image/artist7.png" alt="">
+                    </div>
+                    <div class="artists__item_name">Somae Petit</div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="story" id="stories">
+        <div class="container">
+            <div class="story__title">MRL.<span>the story.</span></div>
+            <div class="story__wrapper">
+                <div class="story__tabs">
+                    <div class="story__tabs_tab story__tabs_tab_active" data-tab="#tab1">
+                        <div class="story__tabs_tab_text">Our founders</div>
+                    </div>
+                    <div class="story__tabs_tab" data-tab="#tab2">
+                        <div class="story__tabs_tab_text">Partners</div>
+                    </div>
+                    <div class="story__tabs_tab" data-tab="#tab3">
+                        <div class="story__tabs_tab_text">The future</div>
+                    </div>
+                </div>
+                <div class="story__block story__block_active" id="tab1">
+                    <div class="story__block_item">
+                        <div class="story__block_item_image">
+                            <img src="image/storyIMG.png" alt="">
+                        </div>
+                    </div>
+                    <div class="story__block_item story__block_item_second">
+                        <div class="story__block_item_title">
+                            META record label was founded by Shaky Lake and Baky Hike in 2020 business accelerator. Tab1
+                        </div>
+                        <div class="story__block_item_descr">Hac habitasse platea dictumst vestibulum rhoncus est. Sit amet dictum sit amet justo. Tortor aliquam nulla facilisi cras.</div>
+                        <div class="story__block_item_descr">
+                            Maecenas ultricies mi eget mauris pharetra. Sit amet consectetur adipiscing elit ut aliquam purus. Porta nibh venenatis cras sed felis. Aenean vel elit scelerisque mauris pellentesque pulvinar. Et malesuada fames ac turpis egestas sed tempus. Enim sit amet venenatis urna cursus eget.
+                        </div>
+                        <div class="story__block_item_descr">
+                            Maecenas ultricies mi eget mauris pharetra et ultrices. A condimentum vitae sapien pellentesque habitant morbi.
+                        </div>
+                    </div>
+                </div>
+                <div class="story__block" id="tab2">
+                    <div class="story__block_item">
+                        <div class="story__block_item_image">
+                            <img src="image/storyIMG.png" alt="">
+                        </div>
+                    </div>
+                    <div class="story__block_item story__block_item_second">
+                        <div class="story__block_item_title">
+                            META record label was founded by Shaky Lake and Baky Hike in 2020 business accelerator. Tab2
+                        </div>
+                        <div class="story__block_item_descr">Hac habitasse platea dictumst vestibulum rhoncus est. Sit amet dictum sit amet justo. Tortor aliquam nulla facilisi cras.</div>
+                        <div class="story__block_item_descr">
+                            Maecenas ultricies mi eget mauris pharetra. Sit amet consectetur adipiscing elit ut aliquam purus. Porta nibh venenatis cras sed felis. Aenean vel elit scelerisque mauris pellentesque pulvinar. Et malesuada fames ac turpis egestas sed tempus. Enim sit amet venenatis urna cursus eget.
+                        </div>
+                        <div class="story__block_item_descr">
+                            Maecenas ultricies mi eget mauris pharetra et ultrices. A condimentum vitae sapien pellentesque habitant morbi.
+                        </div>
+                    </div>
+                </div>
+                <div class="story__block" id="tab3">
+                    <div class="story__block_item">
+                        <div class="story__block_item_image">
+                            <img src="image/storyIMG.png" alt="">
+                        </div>
+                    </div>
+                    <div class="story__block_item story__block_item_second">
+                        <div class="story__block_item_title">
+                            META record label was founded by Shaky Lake and Baky Hike in 2020 business accelerator. Tab3
+                        </div>
+                        <div class="story__block_item_descr">Hac habitasse platea dictumst vestibulum rhoncus est. Sit amet dictum sit amet justo. Tortor aliquam nulla facilisi cras.</div>
+                        <div class="story__block_item_descr">
+                            Maecenas ultricies mi eget mauris pharetra. Sit amet consectetur adipiscing elit ut aliquam purus. Porta nibh venenatis cras sed felis. Aenean vel elit scelerisque mauris pellentesque pulvinar. Et malesuada fames ac turpis egestas sed tempus. Enim sit amet venenatis urna cursus eget.
+                        </div>
+                        <div class="story__block_item_descr">
+                            Maecenas ultricies mi eget mauris pharetra et ultrices. A condimentum vitae sapien pellentesque habitant morbi.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="map">
+        <div class="map__image">
+            <img src="image/mapBG.png" alt="">
+        </div>
+        <div class="container">
+        <div class="map__title">
+            Roadmap
+        </div>
+        <div class="map__wrapper">
+            <div class="map__item">
+                <div class="map__item_block">
+                    <div class="map__item_block_top">
+                        <div class="map__item_block_top_wp">
+                            <div class="map__item_block_top_wp_image">
+                                <img src="image/mapNum.png" alt="">
+                            </div>
+                            <div class="map__item_block_top_wp_text">
+                                <div class="map__item_block_top_wp_title">Phase 1 - completed</div>
+                                <div class="map__item_block_top_wp_subtitle">Spring 2022 - pre launch</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map__item_block_bottom">
+                        <div class="map__item_block_bottom_wp">
+                            <div class="map__item_block_bottom_wp_it">
+                                <div class="map__item_block_bottom_wp_text">
+                                    Website 1.2<br>
+                                    Discord community promotion<br>
+                                    MINTING WAVE NFTs
+                                </div>
+                                <div class="map__item_block_bottom_wp_descr">
+                                    WAVE NFTs will be 100% pre-minted and launched as an OpenOcean collection
+                                </div>
+                            </div>
+                            <div class="map__item_block_bottom_wp_image">
+                                <img src="image/map1.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="map__item">
+                <div class="map__item_block">
+                    <div class="map__item_block_top">
+                        <div class="map__item_block_top_wp">
+                            <div class="map__item_block_top_wp_image">
+                                <img src="image/mapNum2.png" alt="">
+                            </div>
+                            <div class="map__item_block_top_wp_text">
+                                <div class="map__item_block_top_wp_title">Phase 2</div>
+                                <div class="map__item_block_top_wp_subtitle">Summer 2022 - GROWTH</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map__item_block_bottom">
+                        <div class="map__item_block_bottom_wp">
+                            <div class="map__item_block_bottom_wp_it">
+                                <div class="map__item_block_bottom_wp_text">
+                                    Hiring for 10 positions in<br>
+                                    Partnerships with main Metaverse players<br>
+                                    MINTING WAVE NFTs
+                                </div>
+                                <div class="map__item_block_bottom_wp_descr">
+                                    Onboarding 100 new artists
+                                </div>
+                                <div class="map__item_block_bottom_wp_descr">
+                                    META Record Labels is holding the first screening of aspiring artists from the list of WAVE NFT holders
+                                </div>
+                            </div>
+                            <div class="map__item_block_bottom_wp_image">
+                                <img src="image/map2.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="map__item">
+                <div class="map__item_block">
+                    <div class="map__item_block_top">
+                        <div class="map__item_block_top_wp">
+                            <div class="map__item_block_top_wp_image">
+                                <img src="image/mapNum3.png" alt="">
+                            </div>
+                            <div class="map__item_block_top_wp_text">
+                                <div class="map__item_block_top_wp_title">Phase 3</div>
+                                <div class="map__item_block_top_wp_subtitle">Summer 2022 - YOuR new stage</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map__item_block_bottom">
+                        <div class="map__item_block_bottom_wp">
+                            <div class="map__item_block_bottom_wp_it">
+                                <div class="map__item_block_bottom_wp_text">
+                                    Onboarding new partners<br>
+                                    First live concert in Sandjar<br>
+                                    Live concert in Decentrafield
+                                </div>
+                                <div class="map__item_block_bottom_wp_descr">
+                                    We secured dates for out artists to peform in front of the live audience of Metaverse. Check the concert schedule in our
+                                </div>
+                            </div>
+                            <div class="map__item_block_bottom_wp_image">
+                                <img src="image/map3.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="map__image_gr map__image_gr_first">
+            <img src="image/green.png" alt="">
+        </div>
+        <div class="map__image_gr map__image_gr_second">
+            <img src="image/green.png" alt="">
+        </div>
+        <div class="map__image_gr map__image_gr_third">
+            <img src="image/green.png" alt="">
+        </div>
+    </div>
+    </section>
+    <section class="partners">
+        <div class="container container__second">
+            <div class="partners__title">Our partners</div>
+            <div class="partners__wrapper">
+                <div class="partners__item">
+                    <div class="partners__item_image">
+                        <img src="image/partners1.png" alt="">
+                    </div>
+                </div>
+                <div class="partners__item">
+                    <div class="partners__item_image">
+                        <img src="image/partners1.png" alt="">
+                    </div>
+                </div>
+                <div class="partners__item">
+                    <div class="partners__item_image">
+                        <img src="image/partners1.png" alt="">
+                    </div>
+                </div>
+                <div class="partners__item">
+                    <div class="partners__item_image">
+                        <img src="image/partners1.png" alt="">
+                    </div>
+                </div>
+                <div class="partners__item">
+                    <div class="partners__item_image">
+                        <img src="image/partners1.png" alt="">
+                    </div>
+                </div>
+                <div class="partners__item">
+                    <div class="partners__item_image">
+                        <img src="image/partners1.png" alt="">
+                    </div>
+                </div>
+                <div class="partners__item">
+                    <div class="partners__item_image">
+                        <img src="image/partners1.png" alt="">
+                    </div>
+                </div>
+                <div class="partners__item">
+                    <div class="partners__item_image">
+                        <img src="image/partners1.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ask">
+        <div class="container">
+            <div class="ask__wrapper">
+                <div class="ask__item">
+                    <div class="ask__item_title">
+                        Frequently
+                        <span>asked</span>
+                        questions
+                    </div>
+                    <div class="ask__item_image">
+                        <img src="image/askBG.png" alt="">
+                    </div>
+                </div>
+                <div class="ask__item ask__item_second">
+                    <div class="ask__item_block">
+                        <div class="ask__item_block_left">
+                            <div class="ask__item_block_titles_title">
+                                When is the NFT launch?
+                            </div>
+                        <div class="ask__item_block_descr">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
+                        </div>
+                    </div>
+                    <div class="ask__item_block_right">
+                            <img src="image/pngegg.png" alt="">
+                    </div>
+                        </div>
+                    <div class="ask__item_block">
+                        <div class="ask__item_block_left">
+                            <div class="ask__item_block_titles_title">
+                                When is the NFT launch?
+                            </div>
+                        <div class="ask__item_block_descr">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
+                        </div>
+                    </div>
+                    <div class="ask__item_block_right">
+                        <div class="ask__item_block_right_arrow">
+                            <img src="image/pngegg.png" alt="">
+                        </div>
+                    </div>
+                        </div>
+                        <div class="ask__item_block">
+                            <div class="ask__item_block_left">
+                                <div class="ask__item_block_titles_title">
+                                    When is the NFT launch?
+                                </div>
+                            <div class="ask__item_block_descr">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
+                            </div>
+                        </div>
+                        <div class="ask__item_block_right">
+                            <div class="ask__item_block_right_arrow">
+                                <img src="image/pngegg.png" alt="">
+                            </div>
+                        </div>
+                            </div>
+                            <div class="ask__item_block">
+                                <div class="ask__item_block_left">
+                                    <div class="ask__item_block_titles_title">
+                                        When is the NFT launch?
+                                    </div>
+                                <div class="ask__item_block_descr">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
+                                </div>
+                            </div>
+                            <div class="ask__item_block_right">
+                                <div class="ask__item_block_right_arrow">
+                                    <img src="image/pngegg.png" alt="">
+                                </div>
+                            </div>
+                                </div>
+                    <div class="ask__item_block">
+                        <div class="ask__item_block_left">
+                            <div class="ask__item_block_titles_title">
+                                When is the NFT launch?
+                            </div>
+                        <div class="ask__item_block_descr">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
+                        </div>
+                    </div>
+                    <div class="ask__item_block_right">
+                        <div class="ask__item_block_right_arrow">
+                            <img src="image/pngegg.png" alt="">
+                        </div>
+                    </div>
+                        </div>
+                        <div class="ask__item_block">
+                            <div class="ask__item_block_left">
+                                <div class="ask__item_block_titles_title">
+                                    When is the NFT launch?
+                                </div>
+                            <div class="ask__item_block_descr">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
+                            </div>
+                        </div>
+                        <div class="ask__item_block_right">
+                            <div class="ask__item_block_right_arrow">
+                                <img src="image/pngegg.png" alt="">
+                            </div>
+                        </div>
+                            </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="team">
+        <div class="container">
+            <div class="team__title">
+                team
+            </div>
+            <div class="team__wrapper">
+                <div class="team__item">
+                    <div class="team__item_image">
+                        <img src="image/team1.png" alt="">
+                    </div>
+                    <div class="team__item_name">
+                        Shaky Lake
+                    </div>
+                    <div class="team__item_info">
+                        Founder
+                    </div>
+                    <div class="team__item_icons">
+                        <div class="team__item_icons_icon">
+                            <svg><use xlink:href="#twitter"></use></svg>
+                        </div>
+                        <div class="team__item_icons_icon">
+                            <svg><use xlink:href="#linkedin"></use></svg>
+                        </div>
+                    </div>
+                    <div class="team__item_descr">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                    </div>
+                </div>
+                <div class="team__item">
+                    <div class="team__item_image">
+                        <img src="image/team2.png" alt="">
+                    </div>
+                    <div class="team__item_name">
+                        Baky Hike
+                    </div>
+                    <div class="team__item_info">
+                        Co-founder
+                    </div>
+                    <div class="team__item_icons">
+                        <div class="team__item_icons_icon">
+                            <svg><use xlink:href="#twitter"></use></svg>
+                        </div>
+                        <div class="team__item_icons_icon">
+                            <svg><use xlink:href="#linkedin"></use></svg>
+                        </div>
+                    </div>
+                    <div class="team__item_descr">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                    </div>
+                </div>
+                <div class="team__item">
+                    <div class="team__item_image">
+                        <img src="image/team3.png" alt="">
+                    </div>
+                    <div class="team__item_name">
+                        Vania Do
+                    </div>
+                    <div class="team__item_info">
+                        Producer
+                    </div>
+                    <div class="team__item_icons">
+                        <div class="team__item_icons_icon">
+                            <svg><use xlink:href="#twitter"></use></svg>
+                        </div>
+                        <div class="team__item_icons_icon">
+                            <svg><use xlink:href="#linkedin"></use></svg>
+                        </div>
+                    </div>
+                    <div class="team__item_descr">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="join" id="contact">
+        <div class="container">
+            <div class="join__wrapper">
+                <div class="join__item join__item_first">
+                    <div class="join__item_title">
+                        Join our<br>
+                        <span>Discord</span>
+                    </div>
+                    <div class="join__item_descr">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
+                    </div>
+                    <div class="join__item_btn">
+                        <button class="button button--join"><span><img src="image/discord.png" alt="">Join Discord</span></button>
+                    </div>
+                </div>
+                <div class="join__item">
+                    <div class="join__item_image">
+                        <img src="image/joinImage.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__item">
+                    <div class="footer__item_logo">
+                        <img src="image/footerLogo.png" alt="">
+                    </div>
+                    <div class="footer__item_text">
+                        © 2022 All rights reserved
+                    </div>
+                </div>
+                <div class="footer__item">
+                    <ul class="footer__item_list">
+                        <li class="footer__item_list_type"><a href="#">Wave NFTs</a></li>
+                        <li class="footer__item_list_type"><a href="#">Stories</a></li>
+                        <li class="footer__item_list_type"><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer__item">
+                    <ul class="footer__item_list">
+                        <li class="footer__item_list_type"><a href="#">Licencing</a></li>
+                        <li class="footer__item_list_type"><a href="#">Style Guide</a></li>
+                        <li class="footer__item_list_type"><a href="#">Changelog</a></li>
+                    </ul>
+                </div>
+                <div class="footer__item">
+                    <div class="footer__item_info footer__item_info_first">
+                        Powered by Webflow
+                    </div>
+                    <div class="footer__item_info footer__item_info_second">
+                        Developed by Denis S.
+                    </div>
+                </div>
+                <div class="footer__item">
+                    <div class="footer__item_icons">
+                        <div class="footer__item_icons_icon">
+                            <svg><use xlink:href="#twitter"></use></svg>
+                        </div>
+                        <div class="footer__item_icons_icon">
+                            <svg><use xlink:href="#discord"></use></svg>
+                        </div>
+                        <div class="footer__item_icons_icon">
+                            <svg><use xlink:href="#youtube"></use></svg>
+                        </div>
+                        <div class="footer__item_icons_icon">
+                            <svg><use xlink:href="#telegram"></use></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+ <script src="js/script.js"></script>   
+</body>
+</html>

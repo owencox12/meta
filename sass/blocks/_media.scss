@@ -1,0 +1,472 @@
+@media (max-width: 1480px) {
+    .container {
+        max-width: 1200px;
+    }
+    .partners__item {
+        margin-top: 15px !important;
+        width: 30%;
+    }
+    .promo__item_image {
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+    .map__image_gr_first {
+        top: 6%;
+        left: 0;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 900px;
+    }
+    .story__wrapper {
+        flex-wrap: wrap;
+    }
+    .story__tabs {
+        display: flex;
+    }
+    .artists__item {
+        width: 50%;
+    }
+    .partners__item {
+        width: 50%;
+    }
+    .ask {
+        padding-bottom: 100px;
+    }
+    .ask__item {
+        &:nth-child(2) {
+            margin-top: 30px;
+        }
+    }
+    .ask__wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .map__image_gr_second {
+        right: 0;
+    }
+    .map__image_gr_third {
+        left: 0;
+    }
+    .map {
+        padding-bottom: 50px;
+    }
+    .team__wrapper {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .artists__item {
+        &:nth-child(3) {
+            margin-top: 80px;
+        }
+        &:nth-child(4) {
+            margin-top: 80px;
+        }
+    }
+    .team__item {
+        width: 50%;
+    }
+}
+
+@media (max-width: 991px) {
+    .container {
+        max-width: 720px;
+    }
+    .promo__item_image {
+        display: none;
+    }
+    .promo__item_title {
+    }
+    .nft__wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .nft__item {
+        &:nth-child(2) {
+            margin-top: 30px;
+        }
+    }
+    .story__block_item_title {
+        width: 350px;
+    }
+    .story__block_item_descr {
+        width: 400px;
+    }
+    .join__item_image {
+        img {
+            max-width: 100%;
+        }
+    }
+    .map__image_gr_first {
+        img {
+            width: 600px;
+        }
+    }
+    .map__image_gr_second {
+        img {
+            width: 600px;
+        }
+    }
+    .map__image_gr_third {
+        img {
+            width: 600px;
+        }
+    }
+    .promo__item_title {
+        width: auto;
+    }
+    .footer__wrapper {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .footer__item {
+        &:nth-child(5) {
+            margin-top: 30px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 520px;
+    }
+    .nft__item_text {
+        width: 400px;
+    }
+    .nft__item_descr {
+        width: 400px;
+    }
+    .artists__item {
+        width: 100%;
+    }
+    .story__block {
+        padding: 30px;
+    }
+    .map__item_block_bottom_wp_descr {
+        width: 200px;
+    }
+    .map__item_block {
+        width: 450px;
+    }
+    .map__item_block_top_wp_title {
+        font-size: 13px;
+    }
+    .partners {
+        min-height: 350px;
+    }
+    .partners__wrapper {
+        flex-wrap: nowrap;
+        overflow: scroll;
+    }
+    .partners__item {
+        width: 100%;
+        margin: 0 30px;
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+    .join__wrapper {
+        justify-content: center;
+    }
+    .join__item_image {
+        display: none;
+    }
+    .team__item {
+        width: 100%;
+    }
+    .ask__item_block_descr {
+        width: 400px;
+        font-size: 15px;
+    }
+    .story__block_active {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .story__block {
+        width: 400px;
+    }
+    .story__wrapper {
+        justify-content: center;
+    }
+    .story__block_item_image {
+        margin-bottom: 30px;
+    }
+    .story__tabs_tab {
+        padding: 28.7px;
+    }
+    .story__title {
+        padding-top: 100px;
+    }
+    .map__image {
+        display: none;
+    }
+    .map__title {
+        padding-top: 0;
+    }
+    .join__item_first {
+        padding-top: 0;
+    }
+    .join__wrapper {
+        padding-top: 120px;
+    }
+    .footer__wrapper {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .footer {
+        padding-bottom: 30px;
+    }
+    .footer__item {
+        &:nth-child(4) {
+            margin-top: 30px;
+        }
+    }
+    .team__item {
+        &:nth-child(2) {
+            margin-top: 30px;
+        }
+        &:nth-child(3) {
+            margin-top: 30px;
+        }
+    }
+    .join__item_descr {
+        width: auto;
+    }
+    .header__item_list {
+        display: none;
+    }
+    .header__item_icons {
+        display: none;
+    }
+    .header__burger {
+        position: relative;
+        width: 50px;
+        height: 20px;
+        display: block;
+        z-index: 1000;
+        top: 3%;
+        right: 2%;
+        &_active {
+            span {
+                display: none;
+            }
+            &::before {
+                transform: rotate(-45deg);
+                bottom: 9%;
+            }
+            &::after {
+                transform: rotate(45deg);
+                top: 9%;
+            }
+        }
+        span {
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            background: #fff;
+            transition: all .3s;
+            top: 9px;
+            left: 0;
+        }
+        &::before {
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            background: #fff;
+            transition: all .3s;
+            top: 0;
+            left: 0;
+            content: '';
+        }
+        &::after {
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            background: #fff;
+            bottom: -16%;
+            left: 0;
+            transition: all .3s;
+            content: '';
+        }
+    }
+    .promo__item_descr {
+        margin-bottom: 30px;
+    }
+    .header__burger_list {
+        position: fixed;
+        width: 50%;
+        height: 100%;
+        background: #222;
+        border-right: 2px solid #fff;
+        border-top: 2px solid #fff;
+        top: 100px;
+        left: -100%;
+        display: block;
+        transition: all .3s;
+        &_active {
+            left: 0;
+            transition: all .3s;
+        }
+        &_title {
+            font-family: 'DM Mono';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 88px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            padding-left: 10px;
+        }
+        &_menu {
+            padding-top: 0;
+            padding-left: 20px;
+            margin-bottom: 50px;
+            &_type {
+                margin: 30px 0;
+                a {
+                    font-family: 'DM Mono';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 27px;
+                    line-height: 16px;
+                    color: #FFFFFF;
+                    text-decoration: none;
+                }
+            }
+        }
+        &_icons {
+            display: flex;
+            padding-left: 20px;
+            &_icon {
+                padding: 8px;
+                background: #fff;
+                margin: 0 10px;
+                &:first-child {
+                    margin-left: 0;
+                }
+                svg {
+                    fill: #000;
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 600px) {
+    .map__image_gr {
+        display: none;
+    }
+}
+@media (max-width: 571px) {
+    .container {
+        max-width: 420px;
+    }
+    .map {
+        position: static;
+    }
+    .map__wrapper {
+        position: static;
+    }
+    .map__image_gr {
+        display: none;
+    }
+    .partners {
+        min-height: 200px;
+    }
+    .partners__title {
+        padding-top: 0;
+    }
+    .footer__item {
+        width: 100%;
+    }
+    .footer__wrapper {
+        justify-content: center;
+    }
+    .footer__item_text {
+        display: none;
+    }
+    .footer__item_logo {
+        margin-bottom: 40px;
+    }
+    .artists__item {
+        &:nth-child(2) {
+            margin-top: 80px;
+        }
+    }
+    .header__burger_list {
+        width: 70%;
+    }
+    .story__tabs_tab {
+        padding: 41.7px;
+    }
+}
+@media (max-width: 470px) {
+    .container {
+        max-width: 320px;
+    }
+    .map__image_gr {
+        display: none;
+    }
+    .nft__item_text {
+        width: 300px;
+    }
+    .nft__item_descr {
+        width: 300px;
+    }
+    .story__block_item_title {
+        width: 300px;
+    }
+    .story__block_item_descr {
+        width: 300px;
+    }
+    .story__block {
+        width: 300px;
+    }
+    .map__item_block {
+        width: 300px;
+    }
+    .map__item_block_bottom_wp_image {
+        display: none;
+    }
+    .ask__item_block_descr {
+        width: 250px;
+    }
+    .artists__title {
+        font-size: 60px;
+    }
+    .artists__wrapper {
+        margin-top: 70px;
+    }
+    .ask__item_title {
+        width: 200px;
+        font-size: 37px;
+        padding-left: 30px;
+    }
+    .nft__item_title {
+        width: 200px;
+        padding-left: 30px;
+    }
+    .story__tabs_tab {
+        padding: 19.7px;
+    }
+    .story__block {
+        width: 270px;
+    }
+    .team__item_image {
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+    .nft__item_image {
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}

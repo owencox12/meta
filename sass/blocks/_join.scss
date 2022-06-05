@@ -1,0 +1,37 @@
+.join {
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 213px;
+        padding-bottom: 80px;
+    }
+    &__item {
+        &_first {
+            padding-top: 100px;
+        }
+        &_title {
+            font-family: 'Audiowide';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 51px;
+            line-height: 61px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            span {
+                color: #8DFD1B;
+            }
+        }
+        &_descr {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            color: #FFFFFF;
+            margin-top: 34px;
+            width: 345px;
+            margin-bottom: 35px;
+        }
+        &_image {}
+    }
+}

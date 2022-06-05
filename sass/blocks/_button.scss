@@ -1,0 +1,52 @@
+.button {
+    &--promo {
+        width: 205px;
+        height: 60px;
+        background: #8DFD1B;
+        border: none;
+        span {
+            font-family: 'DM Mono';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 16px;
+            text-align: center;
+            text-transform: capitalize;
+            color: #000000;
+        }
+    }
+    &--nft {
+        width: 246px;
+        height: 42px;
+        border: 1px solid #8DFD1B;
+        background: none;
+        margin-top: 36px;
+        span {
+            font-family: 'DM Mono';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 16px;
+            text-transform: capitalize;
+            color: #FFFFFF;
+        }
+    }
+    &--join {
+        width: 213px;
+        height: 43px;
+        border: none;
+        background: #8DFD1B;
+        span {
+            font-family: 'DM Mono';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 16px;
+            text-transform: capitalize;
+            color: #000000;
+            img {
+                margin-right: 9px;
+            }
+        }
+    }
+}

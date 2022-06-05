@@ -1,0 +1,35 @@
+.partners {
+    min-height: 500px;
+    &__title {
+        font-family: 'DM Mono';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 12px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #8DFD1B;
+        text-align: center;
+        padding-top: 124px;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 50px;
+    }
+    &__item {
+        &:nth-child(5) {
+            margin-top: 61px;
+        }
+        &:nth-child(6) {
+            margin-top: 61px;
+        }
+        &:nth-child(7) {
+            margin-top: 61px;
+        }
+        &:nth-child(8) {
+            margin-top: 61px;
+        }
+    }
+}

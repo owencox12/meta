@@ -1,0 +1,65 @@
+.footer {
+    min-height: 338px;
+    background: #42006A;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 103px;
+    }
+    &__item {
+        &_text {
+            font-family: 'DM Mono';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 20px;
+            color: #FFFFFF;
+            margin-top: 70px;
+        }
+        &_list {
+            &_type {
+                margin: 19.5px 0px;
+                a {
+                    font-family: 'DM Mono';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 19px;
+                    color: #FFFFFF;
+                    text-decoration: none;
+                }
+            }
+        }
+        &_info {
+            font-family: 'DM Mono';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 15px;
+            color: #FFFFFF;
+            &_second {
+                margin-top: 29px;
+            }
+        }
+        &_icons {
+            display: flex;
+            &_icon {
+                padding: 8px;
+                background: #fff;
+                margin: 0 6px;
+                cursor: pointer;
+                &:first-child {
+                    margin-left: 0;
+                }
+                svg {
+                    width: 20px;
+                    height: 20px;
+                    &:hover {
+                        fill: gray;
+                        transition: all .3s;
+                    }
+                }
+            }
+        }
+    }
+}

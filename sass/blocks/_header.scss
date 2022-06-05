@@ -1,0 +1,67 @@
+.header {
+    min-height: 100px;
+    background: #000;
+    position: fixed;
+    width: 100%;
+    z-index: 1001;
+    transition: all .3s;
+    &__active {
+        border-bottom: 1px solid #8DFD1B;
+        transition: all .3s;
+    }
+    &__wrapper {
+        display: flex;
+        padding-top: 45px;
+        justify-content: space-between;
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        &_logo {
+            cursor: pointer;
+        }
+        &_list {
+            display: flex;
+            &_type {
+                margin: 0 20px;
+                &:first-child {
+                    margin-left: 40px;
+                }
+                a {
+                    font-family: 'DM Mono';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 16px;
+                    color: #FFFFFF;
+                    text-decoration: none;
+                    outline: none;
+                }
+            }
+        }
+        &_icons {
+            display: flex;
+            &_icon {
+                padding: 8px;
+                background: #fff;
+                margin: 0 6px;
+                cursor: pointer;
+                svg {
+                    fill: #000;
+                    width: 20px;
+                    height: 20px;
+                    &:hover {
+                        fill: gray;
+                        transition: all .3s;
+                    }
+                }
+            }
+        }
+    }
+    &__burger {
+        display: none;
+        &_list {
+            display: none;
+        }
+    }
+}
